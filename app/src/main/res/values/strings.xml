@@ -1,0 +1,47 @@
+<resources>
+    <string name="app_name">Github Search User</string>
+    <string name="avatar_description">Avatar Description</string>
+    <string name="searchbar_hint">Masukkan kata</string>
+    <!--  text = constant value appear on view  -->
+    <string name="text_followers">followers</string>
+    <string name="text_separator">•</string>
+    <string name="text_following">following</string>
+    <string name="text_repository">Repositories</string>
+    <string name="text_search_hint">Cari Pengguna</string>
+    <string name="fab_favorite">Add to favorites</string>
+    <string name="dark_mode">Dark Mode</string>
+    <!--  var = preview value will be replaced  -->
+    <string name="var_name">Name</string>
+    <string name="var_username">\@username</string>
+    <string name="var_location">Location</string>
+    <string name="var_company">Company</string>
+    <string name="var_save_time">1 Hari yang lalu</string>
+
+    <!--  constant value in popup menu -->
+    <string name="menu_lihat_profile">Lihat Profile</string>
+    <string name="menu_share_profile">Share Profile</string>
+    <string name="menu_lihat_repository">Lihat Repository</string>
+    <string name="menu_user_favorite">User Favorite</string>
+    <string name="menu_setting">Pengaturan Aplikasi</string>
+    <string name="menu_remove">Hapus Semua</string>
+
+    <!--  text will replace with integer value  -->
+    <string name="dummy_int">100</string>
+
+    <!--  content description of icon  -->
+    <string name="icon_location">icon location</string>
+    <string name="icon_company">icon company</string>
+    <string name="icon_repository">icon repository</string>
+    <string name="icon_social">icon social</string>
+    <string name="icon_github">icon github</string>
+    <string name="icon_favorite">icon github</string>
+    <string name="icon_remove_favorite">icon remove favorite user</string>
+
+    <!-- Data store setting preference -->
+    <string name="pref_setting_theme">theme</string>
+    <string name="theme_auto">Auto</string>
+    <string name="theme_light">Light Mode</string>
+    <string name="theme_dark">Dark Mode</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

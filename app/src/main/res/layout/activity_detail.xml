@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints">
+
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/md_theme_background"
+                android:theme="@style/AppTheme"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <!-- Container Detail -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/container_detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/default_size"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <!-- CircleImageView -->
+
+                <!-- TextView Name -->
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/img_avatar"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="64dp"
+                    android:src="@drawable/ic_launcher_background"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.494"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_name"
+                    style="@style/tv_username"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/half_size"
+                    android:text="@string/var_name"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/img_avatar" />
+
+                <!-- TextView Username -->
+                <TextView
+                    android:id="@+id/tv_username"
+                    style="@style/list_properties"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/var_username"
+                    android:textStyle="italic"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_name" />
+
+                <!-- ImageView Location -->
+                <ImageView
+                    android:id="@+id/ic_location"
+                    style="@style/list_properties"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:contentDescription="@string/icon_location"
+                    android:src="@drawable/ic_baseline_place"
+                    app:layout_constraintBottom_toTopOf="@+id/ic_company"
+                    app:layout_constraintEnd_toStartOf="@+id/tv_location"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintHorizontal_chainStyle="packed"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_username" />
+
+
+                <!-- TextView Location -->
+                <TextView
+                    android:id="@+id/tv_location"
+                    style="@style/list_properties"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/var_location"
+                    app:layout_constraintStart_toEndOf="@+id/ic_location"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_username" />
+
+                <!-- ImageView Company -->
+                <ImageView
+                    android:id="@+id/ic_company"
+                    style="@style/list_properties"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:contentDescription="@string/icon_company"
+                    android:src="@drawable/ic_baseline_building"
+                    app:layout_constraintBottom_toTopOf="@+id/ic_repository"
+                    app:layout_constraintEnd_toStartOf="@+id/tv_company"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintHorizontal_chainStyle="packed"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ic_location" />
+
+                <!-- TextView Company -->
+                <TextView
+                    android:id="@+id/tv_company"
+                    style="@style/list_properties"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/var_company"
+                    app:layout_constraintStart_toEndOf="@+id/ic_company"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_location" />
+
+                <!-- ImageView Repository -->
+                <ImageView
+                    android:id="@+id/ic_repository"
+                    style="@style/list_properties"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:contentDescription="@string/icon_repository"
+                    android:src="@drawable/ic_baseline_repository"
+                    app:layout_constraintBottom_toTopOf="@+id/ic_people"
+                    app:layout_constraintEnd_toStartOf="@+id/tv_repository"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintHorizontal_chainStyle="packed"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ic_company" />
+
+                <!-- TextView Repository -->
+                <TextView
+                    android:id="@+id/tv_repository"
+                    style="@style/follow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/dummy_int"
+                    app:layout_constraintEnd_toStartOf="@+id/tv_label_repository"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/ic_repository"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_company" />
+
+                <!-- TextView Label Repository -->
+                <TextView
+                    android:id="@+id/tv_label_repository"
+                    style="@style/list_properties"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_repository"
+                    app:layout_constraintStart_toEndOf="@+id/tv_repository"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_company" />
+
+                <!-- ImageView People -->
+                <ImageView
+                    android:id="@+id/ic_people"
+                    style="@style/list_properties"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:contentDescription="@string/icon_social"
+                    android:src="@drawable/ic_baseline_people"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/tv_followers"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintHorizontal_chainStyle="packed"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ic_repository" />
+
+                <!-- TextView Followers -->
+                <TextView
+                    android:id="@+id/tv_followers"
+                    style="@style/follow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/dummy_int"
+                    app:layout_constraintEnd_toStartOf="@+id/tv_label_followers"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/ic_people"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_repository" />
+
+                <!-- TextView Label Followers -->
+                <TextView
+                    android:id="@+id/tv_label_followers"
+                    style="@style/list_properties"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="@string/text_followers"
+                    app:layout_constraintEnd_toStartOf="@+id/tv_label_separator"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/tv_followers"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_label_repository" />
+
+                <!-- TextView Label Separator -->
+                <TextView
+                    android:id="@+id/tv_label_separator"
+                    style="@style/follow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/half_size"
+                    android:text="@string/text_separator"
+                    app:layout_constraintEnd_toStartOf="@+id/tv_following"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/tv_label_followers"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_label_repository" />
+
+                <!-- TextView Following -->
+                <TextView
+                    android:id="@+id/tv_following"
+                    style="@style/follow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/dummy_int"
+                    app:layout_constraintEnd_toStartOf="@+id/tv_label_following"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/tv_label_separator"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_label_repository" />
+
+                <!-- TextView Label Following -->
+                <TextView
+                    android:id="@+id/tv_label_following"
+                    style="@style/list_properties"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="@string/text_following"
+                    app:layout_constraintStart_toEndOf="@+id/tv_following"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_label_repository" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!-- ProgressBar -->
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:visibility="gone"
+                app:layout_constraintBottom_toTopOf="@+id/tabs"
+                app:layout_constraintEnd_toEndOf="@+id/container_detail"
+                app:layout_constraintStart_toStartOf="@+id/container_detail"
+                app:layout_constraintTop_toTopOf="@+id/container_detail" />
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/container_detail" />
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/view_pager"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tabs" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <!-- FloatingActionButton -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_favorite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/default_size"
+        android:src="@drawable/baseline_favorite_24"
+        android:contentDescription="@string/fab_favorite"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
